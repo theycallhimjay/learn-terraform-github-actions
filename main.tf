@@ -15,10 +15,10 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "jasondtest"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "demo-github-actions"
     }
   }
 }
@@ -28,6 +28,7 @@ provider "aws" {
 }
 
 resource "random_pet" "sg" {}
+
 
 data "aws_ami" "ubuntu" {
   most_recent = true
